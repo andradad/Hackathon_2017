@@ -1,0 +1,302 @@
+<html>
+<body>
+
+<h1>Class Lookup</h1>
+<h2>Select Course</h2>
+<h3>Select Core Requirement</h3>
+
+<p id="demo"></p>
+    
+<script>
+
+    
+
+var JaredText = '{"courses":{' +
+                    '"SMRT1001":{' +
+                        '"name"="intro to school",' + "level"="freshman",' +
+                        '"Core"="Arts",' +
+                        '"PreRec"="None",' +
+                        '"sections":{' +
+                            '"01":{' +
+                                '"Prof"="Einstein",' +
+                                '"Time"="9:00",' +
+                                '"Day"="MWF"}' +
+                            '"02":{' +
+                                '"Prof"=Edison",' +
+                                '"Time"="10:30",' +
+                                '"Day"="TTH"}' +
+                          '},' +  
+                         '},' +  
+                    '"ARTH1102":{' +
+                        '"name"="Art: Renaissance to Modern Times",' +
+                        '"Core"="Arts",' +
+                        '"PreRec"="None",' +
+                        '"sections":{' +
+                            '"01":{'+
+                                '"Prof"="Howe",' +
+                                '"Time"="12:00",' +
+                                '"Day"="TTH"}' +
+                            '"02":{'+
+                                '"Prof"="Callahan",' +
+                                '"Time"="1:30",' +
+                                '"Day"="TTH"}' +
+                           '},' +  
+                         '},' +
+                    '"AADS1105":{' +
+                        '"name"="African American History II",' +
+                        '"Core"="Cultural Diversity",' +
+                        '"PreRec"="None",' +
+                        '"sections":{' +
+                            '"01":{' +
+                                '"Prof"="Miller",' +
+                                '"Time"="1:00",' +
+                                '"Day"="MWF"}' +
+                           '},' +  
+                         '},' +    
+                    '"HIST1012":{' +
+                        '"name"="Atlantic Worlds II",' +
+                        '"Core"="History II"' +
+                        '"PreRec"="None",' +
+                        '"sections":{' +
+                            '"01":{' +
+                                '"Prof"="Cronin",' +
+                                '"Time"="3:00",' +
+                                '"Day"="MWF"}' +
+                            '"02":{' +
+                                '"Prof"="Gallagher",' +
+                                '"Time"="1:00",' +
+                                '"Day"="MWF"}' +    
+                           '},' +  
+                         '},' +     
+                    '"HIST1093":{' +
+                        '"name"="Modern History I",' +
+                        '"Core"="History I"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Twomey",' +
+                                '"Time"="12:00",' +
+                                '"Day"="TTh"}' +
+                            '"02":{' +
+                                '"Prof"="Twomey",' +
+                                '"Time"="4:30",' +
+                                '"Day"="TTh"}' +  
+                           '},' +  
+                         '},' +       
+                    '"ENGL1079":{' +
+                        '"name"="Literature Core for English Language Learners",' +
+                        '"Core"="Literature"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Anderson",' +
+                                '"Time"="10:30",' +
+                                '"Day"="TTh"}' +
+                            '"03":{' +
+                                '"Prof"="Puente",' +
+                                '"Time"="11:00",' +
+                                '"Day"="MWF"}' + 
+                           '},' +  
+                         '},' +     
+                    '"MATH1100":{' +
+                        '"name"="Calculus I",' +
+                        '"Core"="Math"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Clote",' +
+                                '"Time"="10:00",' +
+                                '"Day"="MWF"}' +
+                            '"02":{' +
+                                '"Prof"="Clote",' +
+                                '"Time"="11:00",' +
+                                '"Day"="MWF"}' +   
+                           '},' +  
+                         '},' +     
+                    '"BIOL2010":{' +
+                        '"name"="Ecology and Evolution",' +
+                        '"Core"="Natural Science"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Olins",' +
+                                '"Time"="1:30",' +
+                                '"Day"="TTh"}' +
+                            '"02":{' +
+                                '"Prof"="Dacosta",' +
+                                '"Time"="10:00",' +
+                                '"Day"="MWF"}' +   
+                           '},' +  
+                         '},' +     
+                    '"PHIL1070":{' +
+                        '"name"="Philosphy of the Person I",' +
+                        '"Core"="Philosophy"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Oldfield",' +
+                                '"Time"="12:00",' +
+                                '"Day"="MWF"}' +
+                            '"02":{' +
+                                '"Prof"="Conley",' +
+                                '"Time"="2:00",' +
+                                '"Day"="TTh"}' +  
+                           '},' +  
+                         '},' +    
+                    '"ECON1132":{' +
+                        '"name"="Macroeconomics",' +
+                        '"Core"="Social Science"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Richardson",' +
+                                '"Time"="1:30",' +
+                                '"Day"="TTh"}' +
+                            '"02":{' +
+                                '"Prof"="Konan",' +
+                                '"Time"="10:30",' +
+                                '"Day"="TTh"}' +      
+                           '},' +  
+                         '},' +
+                    '"THEO1002":{' +
+                        '"name"="Biblical Heritage II",' +
+                        '"Core"="Theology"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Darr",' +
+                                '"Time"="9:00",' +
+                                '"Day"="TTh"}' +
+                            '"02":{' +
+                                '"Prof"="Morrison",' +
+                                '"Time"="12:00",' +
+                                '"Day"="TTh"}' + 
+                           '},' +  
+                         '},' +      
+                    '"ENGL1010":{' +
+                        '"name"="First Year Writing",' +
+                        '"Core"="Writing"' +
+                        '"PreRec"="None",' +
+                        '"sections":{'+
+                            '"01":{' +
+                                '"Prof"="Adair",' +
+                                '"Time"="9:00",' +
+                                '"Day"="MWF"}' +
+                            '"02":{' +
+                                '"Prof"="Gentilella",' +
+                                '"Time"="3:00",' +
+                                '"Day"="TTh"}' +  
+                           '},' +  
+                         '},' +
+                       '},' +       
+                     '}'                  
+
+var Req = '{"Requirements":{' +
+                '"Arts":{' +
+                    '"SMRT1001",' +
+                    '"ARTH1102",' +
+                    '"ARTH2222",' +
+                    '"ARTS1101",' +
+                    '"MUSA1100",' +
+                    '"MUSA1300",' +
+                    '"THTR1120",' +
+                    '},' +
+                'Cultural Diversity":{' +
+                    '"AADS1105",' +
+                    '},' + 
+                '"History I":{'+ 
+                    '"HIST1093",' +
+                    '"HIST1705",' +
+                    '},' +
+                '"History II":{'+
+                    '"THEO1162",' +
+                    '"HIST1012",' +
+                    '"HIST1078",' +
+                    '"HIST1084",' +
+                    '"HIST1088",' +
+                    '"HIST1114",' +
+                    '"HIST1505",' +
+                    '"HIST1509",' +
+                    '"HIST1704",' + 
+                    '},' +
+                '"Liturature":{'+
+                    '"ENGL1079",' +
+                    '"ENGL1714",' +
+                    '"ENGL1715",' +
+                    '"ENGL1718",' +
+                    '"SOCY1705",' +
+                    '"SPAN3395",' +
+                    '},' +
+                '"Math":{'+
+                    '"MATH1004",' +
+                    '"MATH1007",' +
+                    '"MATH1100",' +
+                    '"MATH1101",' +
+                    '"UNAS1121",' +
+                    '"CSCI1101",' +
+                    '},'+
+                '"Natural Science":{'+
+                    '"BIOL1100",' +
+                    '"BIOL2010",' +
+                    '"CHEM1102",' +
+                    '"CHEM1106",' +
+                    '"CHEM1110",' +
+                    '"CHEM1118",' +
+                    '"CHEM1701",' +
+                    '"EESC1174",' +
+                    '"EESC1177",' +
+                    '"EESC1182",' +
+                    '"EESC1187",' +
+                    '"PHYS2201",' +
+                    '},' +
+                '"Philisophy":{'+      
+                    '"PHIL1070",' +
+                    '"PHIL1071",' +
+                    '"PHIL1089",' +
+                    '"PHIL1091",' +
+                    '"PHIL2282",' +
+                    '},' +
+                '"Social Science":{'+
+                    '"AADS1110",' +
+                    '"ECON1131",' +
+                    '"ECON1701",' +
+                    '"POLI1043",' +
+                    '"POLI1045",' +
+                    '"PSYC1032",' +
+                    '"PSYC1110",' +
+                    '"PSYC1111",' +
+                    '"SOCY1001",' +
+                    '"SOCY1002",' +
+                    '"SOCY1024",' +
+                    '"SOCY1030",' +
+                    '"SOCY1043",' +
+                    '"SOCY1071",' +
+                    '"SOCY1092",' +
+                    '"SOCY1093",' +
+                    '},' +
+                '"Theology":{'+                    
+                    '"THEO1002",' +
+                    '"THEO1017",' +
+                    '"THEO1024",' +
+                    '"THEO1089",' +
+                    '"THEO1091",' +
+                    '"THEO1162",' +
+                    '"THEO1700",' +
+                    '},' +
+                '"Writing":{'+ 
+                    '"ENGL1010",' +
+                   '},' +
+
+                '},' +
+    '}'
+
+
+    
+    
+var obj = JSON.parse(JaredText);
+document.getElementById("demo").innerHTML =
+obj.Requirments.Theology[1];
+</script>
+<h3>hello world</h3>
+</body>
+</html>

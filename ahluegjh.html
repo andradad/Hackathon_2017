@@ -1,0 +1,59 @@
+<html>
+<body>
+
+<h1>Class Lookup</h1>
+<h2>Select Course</h2>
+<h3>Select Core Requirement</h3>
+
+<p id="demo"></p>
+    
+<script>
+
+    
+
+
+var Text = {
+    "Courses": [{
+       "Code":"SMRT1001",
+        "Dept":"Smart",
+        "Name":"Intro to School",
+        "Level":"1000",
+        "Core":"Arts",
+        "Prerec":"None",
+        "Section": [{
+            "SectionNum":"01",
+             "Prof":"Einstein",
+             "Time":"9.00",
+             "Day":"TTH"},
+            {"SectionNum":"01",
+             "Prof":"Edison",
+             "Time":"10.30",
+             "Day":"TTH"}]},
+        {    
+        "Code":"SMRT4000",
+         "Name":"How to Be Smart",
+         "Dept":"Smart",
+         "Level":"4000",
+         "Core":"None",
+         "Prerec":"SMRT1001",
+         "Section":[
+             {"SectionNum":"01",
+              "Prof":"Hawking",
+              "Time":"9.00",
+              "Day":"TTH"}]
+         
+            }
+            
+        ]
+        };
+        
+        
+    
+obj = JSON.parse(Text);
+        console.log(obj);
+document.getElementById("demo").innerHTML =
+obj.courses[1]
+</script>
+<h3>hello world</h3>
+</body>
+</html>
