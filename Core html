@@ -1,0 +1,221 @@
+<html>
+<head>
+
+    <h1>Choose Core</h1>
+    
+<script>
+function disable() {
+    document.getElementById("mySelect").disabled=true;
+}
+function enable() {
+    document.getElementById("mySelect").disabled=false;
+}
+</script>
+</head>
+<body>
+
+<script>
+    
+var Text = 
+    '{"Classes":[' + 
+       '{"Course":"ARTH110201", "Name":"Art: Renaissance to Modern Times", "Core":"Arts", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ARTH110202", "Name":"Art: Renaissance to Modern Times", "Core":"Arts", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"ARTH222201", "Name":"Imagination and Imagery: Later Medieval Art", "Core":"Arts", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ARTH222202", "Name":"Imagination and Imagery: Later Medieval Art", "Core":"Arts", "Day":"TTh", "Time":"15"},'+
+'{"Course":"ARTH222203", "Name":"Imagination and Imagery: Later Medieval Art", "Core":"Arts", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ARTS110101", "Name":"Drawing I: Foundations", "Core":"Arts", "Day":"MWF", "Time":"8"},'+
+'{"Course":"ARTS110102", "Name":"Painting I: Foundations", "Core":"Arts", "Day":"MWF", "Time":"12"},'+
+'{"Course":"ARTS110103", "Name":"Painting I: Foundations", "Core":"Arts", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ARTS110104", "Name":"Painting I: Foundations", "Core":"Arts", "Day":"TTh", "Time":"12"},'+
+'{"Course":"MUSA110001", "Name":"Fundamentals of Music Theory I", "Core":"Arts", "Day":"MWF", "Time":"11"},'+
+'{"Course":"MUSA110001", "Name":"Fundamentals of Music Theory I", "Core":"Arts", "Day":"MWF", "Time":"13"},'+
+'{"Course":"MUSA130001", "Name":"History of Popular Music", "Core":"Arts", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"THTR112001", "Name":"Elements of Dance", "Core":"Arts", "Day":"MWF", "Time":"15"},'+
+'{"Course":"THTR112002", "Name":"Elements of Dance", "Core":"Arts", "Day":"MWF", "Time":"13"},'+
+'{"Course":"THTR112003", "Name":"Elements of Dance", "Core":"Arts", "Day":"TTh", "Time":"9"},'+
+'{"Course":"AADS110501", "Name":"African American History II", "Core":"CDiv", "Day":"MWF", "Time":"13"},'+
+'{"Course":"AADS110502", "Name":"African American History II", "Core":"CDiv", "Day":"TTh", "Time":"15"},'+
+'{"Course":"AADS110502", "Name":"African American History II", "Core":"CDiv", "Day":"MWF", "Time":"9"},'+
+'{"Course":"AADS110503", "Name":"African American History II", "Core":"CDiv", "Day":"MWF", "Time":"8"},'+
+'{"Course":"AADS224301", "Name":"Gender and Slavery", "Core":"CDiv", "Day":"TTh", "Time":"15"},'+
+'{"Course":"AADS224801", "Name":"Advanced Community Service Research Seminar I", "Core":"CDiv", "Day":"TTh", "Time":"15"},'+
+'{"Course":"AADS224802", "Name":"Advanced Community Service Research Seminar I", "Core":"CDiv", "Day":"MWF", "Time":"14"},'+
+'{"Course":"AADS224803", "Name":"Advanced Community Service Research Seminar I", "Core":"CDiv", "Day":"MWF", "Time":"15"},'+
+'{"Course":"ARTH224401", "Name":"Chinese Visual Culture", "Core":"CDiv", "Day":"MWF", "Time":"11"},'+
+'{"Course":"ARTH225001", "Name":"Introduction to African Art", "Core":"CDiv", "Day":"MWF", "Time":"14"},'+
+'{"Course":"ARTH227401", "Name":"The Arts of Buddhism", "Core":"CDiv", "Day":"MWF", "Time":"13"},'+
+'{"Course":"ARTH228001", "Name":"Masterpieces of Islamic Art", "Core":"CDiv", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ARTH335001", "Name":"Object in Islamic Art", "Core":"CDiv", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ARTH335002", "Name":"Object in Islamic Art", "Core":"CDiv", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ARTH335003", "Name":"Object in Islamic Art", "Core":"CDiv", "Day":"MWF", "Time":"10"},'+
+'{"Course":"EALC216201", "Name":"Gods and Heroes in Chinese Literature (in trans)", "Core":"CDiv", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"ECON227301", "Name":"Development of Economics", "Core":"CDiv", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ECON337401", "Name":"Development Economics and Policy", "Core":"CDiv", "Day":"MWF", "Time":"14"},'+
+'{"Course":"ENGL248201", "Name":"African American Writers", "Core":"CDiv", "Day":"TTh", "Time":"15"},'+
+'{"Course":"ENGL248202", "Name":"African American Writers", "Core":"CDiv", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ENGL444701", "Name":"The Poetics of Rap", "Core":"CDiv", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ENVS331501", "Name":"Sustainable Agriculture", "Core":"CDiv", "Day":"MWF", "Time":"15"},'+
+'{"Course":"FILM331201", "Name":"World Cinema", "Core":"CDiv", "Day":"MWF", "Time":"12"},'+
+'{"Course":"HIST105601", "Name":"Globalization II", "Core":"CDiv", "Day":"MWF", "Time":"15"},'+
+'{"Course":"HIST105602", "Name":"Globalization II", "Core":"CDiv", "Day":"MWF", "Time":"9"},'+
+'{"Course":"HIST105603", "Name":"Globalization II", "Core":"CDiv", "Day":"MWF", "Time":"9"},'+
+'{"Course":"HIST105604", "Name":"Globalization II", "Core":"CDiv", "Day":"MWF", "Time":"12"},'+
+'{"Course":"HIST111401", "Name":"African Diaspora and the World II", "Core":"CDiv", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"HIST111402", "Name":"African Diaspora and the World II", "Core":"CDiv", "Day":"MWF", "Time":"10"},'+
+'{"Course":"HIST111403", "Name":"African Diaspora and the World II", "Core":"CDiv", "Day":"MWF", "Time":"11"},'+
+'{"Course":"HIST248701", "Name":"Race and Identity in African American History", "Core":"CDiv", "Day":"MWF", "Time":"13"},'+
+'{"Course":"HIST248702", "Name":"Race and Identity in African American History", "Core":"CDiv", "Day":"MWF", "Time":"15"},'+
+'{"Course":"HIST248703", "Name":"Race and Identity in African American History", "Core":"CDiv", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"HIST447601", "Name":"Social Action in America", "Core":"CDiv", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"HIST447602", "Name":"Social Action in America", "Core":"CDiv", "Day":"MWF", "Time":"12"},'+
+'{"Course":"ICSP331001", "Name":"Women and Gender in Islam", "Core":"CDiv", "Day":"TTh", "Time":"12"},'+
+'{"Course":"MUSA132001", "Name":"Introduction to Musics of the World", "Core":"CDiv", "Day":"MWF", "Time":"10"},'+
+'{"Course":"POLI240501", "Name":"Comparative Politics of the Middle East", "Core":"CDiv", "Day":"TTh", "Time":"15"},'+
+'{"Course":"SLAV206701", "Name":"Gender and War in Eastern Europe", "Core":"CDiv", "Day":"MWF", "Time":"13"},'+
+'{"Course":"SLAV216901", "Name":"Slavic Civilizations", "Core":"CDiv", "Day":"MWF", "Time":"13"},'+
+'{"Course":"SOCY104301", "Name":"Introduction to African American Society", "Core":"CDiv", "Day":"MWF", "Time":"8"},'+
+'{"Course":"SOCY109301", "Name":"Comparative Social Change", "Core":"CDiv", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"SOCY109302", "Name":"Comparative Social Change", "Core":"CDiv", "Day":"MWF", "Time":"8"},'+
+'{"Course":"SOCY109303", "Name":"Comparative Social Change", "Core":"CDiv", "Day":"TTh", "Time":"12"},'+
+'{"Course":"THEO116201", "Name":"Religious Quest: Comparative Perspect II", "Core":"CDiv", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"THEO116202", "Name":"Religious Quest: Comparative Perspect II", "Core":"CDiv", "Day":"MWF", "Time":"11"},'+
+'{"Course":"THEO116203", "Name":"Religious Quest: Comparative Perspect II", "Core":"Hist II", "Day":"MWF", "Time":"8"},'+
+'{"Course":"HIST101201", "Name":"Atlantic Worlds II", "Core":"Hist II", "Day":"MWF", "Time":"15"},'+
+'{"Course":"HIST101202", "Name":"Atlantic Worlds II", "Core":"Hist II", "Day":"MWF", "Time":"11"},'+
+'{"Course":"HIST101203", "Name":"Atlantic Worlds II", "Core":"Hist II", "Day":"MWF", "Time":"15"},'+
+'{"Course":"HIST107801", "Name":"Globalization II", "Core":"Hist II", "Day":"MWF", "Time":"12"},'+
+'{"Course":"HIST108401", "Name":"Globalization II", "Core":"Hist II", "Day":"MWF", "Time":"8"},'+
+'{"Course":"HIST108801", "Name":"Globalization II", "Core":"Hist II", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"HIST109301", "Name":"Modern History I", "Core":"Hist I", "Day":"MWF", "Time":"9"},'+
+'{"Course":"HIST111401", "Name":"African Diaspora and the World II", "Core":"Hist II", "Day":"MWF", "Time":"14"},'+
+'{"Course":"HIST150501", "Name":"Planet in Peril:History & Future of Human Impacts", "Core":"Hist II", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"HIST150901", "Name":"The History and Politics of Terrorism", "Core":"Hist II", "Day":"TTh", "Time":"12"},'+
+'{"Course":"HIST150902", "Name":"The History and Politics of Terrorism", "Core":"Hist II", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"HIST170401", "Name":"The Worlds of Moby-Dick", "Core":"Hist II", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"HIST170501", "Name":"Revolutionary Media: How Books Changed History", "Core":"Hist I", "Day":"TTh", "Time":"15"},'+
+'{"Course":"HIST170502", "Name":"Revolutionary Media: How Books Changed History", "Core":"Hist I", "Day":"MWF", "Time":"15"},'+
+'{"Course":"HIST170503", "Name":"Revolutionary Media: How Books Changed History", "Core":"Hist I", "Day":"MWF", "Time":"11"},'+
+'{"Course":"ENGL107901", "Name":"Literature Core for English Language Learners", "Core":"Lite", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"ENGL107902", "Name":"Literature Core for English Language Learners", "Core":"Lite", "Day":"MWF", "Time":"14"},'+
+'{"Course":"ENGL107903", "Name":"Literature Core for English Language Learners", "Core":"Lite", "Day":"MWF", "Time":"8"},'+
+'{"Course":"ENGL171401", "Name":"Reading Melvilles Moby-Dick", "Core":"Lite", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"ENGL171501", "Name":"Revolutionary Media: How Reading Changes Us", "Core":"Lite", "Day":"TTh", "Time":"9"},'+
+'{"Course":"ENGL171502", "Name":"Revolutionary Media: How Reading Changes Us", "Core":"Lite", "Day":"MWF", "Time":"13"},'+
+'{"Course":"ENGL171503", "Name":"Revolutionary Media: How Reading Changes Us", "Core":"Lite", "Day":"MWF", "Time":"15"},'+
+'{"Course":"ENGL171801", "Name":"Reading In/Justice: Literature as Activism", "Core":"Lite", "Day":"MWF", "Time":"13"},'+
+'{"Course":"ENGL171802", "Name":"Reading In/Justice: Literature as Activism", "Core":"Lite", "Day":"MWF", "Time":"12"},'+
+'{"Course":"SOCY170501", "Name":"Growing Up Gendered: Contemporary Media", "Core":"Lite", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"SPAN339501", "Name":"Contextos", "Core":"Lite", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"MATH100401", "Name":"Finite Probability & Applications", "Core":"Math", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"MATH100701", "Name":"Ideas in Mathematics", "Core":"Math", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"MATH110001", "Name":"Calculus I", "Core":"Math", "Day":"MWF", "Time":"15"},'+
+'{"Course":"MATH110002", "Name":"Calculus I", "Core":"Math", "Day":"TTh", "Time":"9"},'+
+'{"Course":"MATH110003", "Name":"Calculus I", "Core":"Math", "Day":"MWF", "Time":"11"},'+
+'{"Course":"MATH110101", "Name":"Calculus II", "Core":"Math", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"MATH110102", "Name":"Calculus II", "Core":"Math", "Day":"MWF", "Time":"13"},'+
+'{"Course":"MATH110103", "Name":"Calculus II", "Core":"Math", "Day":"MWF", "Time":"11"},'+
+'{"Course":"UNAS112101", "Name":"New Scientific Visions II/Perspectives IV", "Core":"Math", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"CSCI110101", "Name":"Computer Science I", "Core":"Math", "Day":"TTh", "Time":"12"},'+
+'{"Course":"BIOL110001", "Name":"Sustaining the Biosphere", "Core":"NSci", "Day":"TTh", "Time":"15"},'+
+'{"Course":"BIOL110002", "Name":"Sustaining the Biosphere", "Core":"NSci", "Day":"TTh", "Time":"9"},'+
+'{"Course":"BIOL110003", "Name":"Sustaining the Biosphere", "Core":"NSci", "Day":"MWF", "Time":"11"},'+
+'{"Course":"BIOL110004", "Name":"Sustaining the Biosphere", "Core":"NSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"BIOL201001", "Name":"Ecology and Evolution", "Core":"NSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"CHEM110201", "Name":"Intersection of Science and Painting", "Core":"NSci", "Day":"TTh", "Time":"9"},'+
+'{"Course":"CHEM110202", "Name":"Intersection of Science and Painting", "Core":"NSci", "Day":"MWF", "Time":"10"},'+
+'{"Course":"CHEM110601", "Name":"Chemistry and Society II", "Core":"NSci", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"CHEM111001", "Name":"General Chemistry II", "Core":"NSci", "Day":"MWF", "Time":"9"},'+
+'{"Course":"CHEM111801", "Name":"Honors Modern Chemistry II", "Core":"NSci", "Day":"MWF", "Time":"13"},'+
+'{"Course":"CHEM170101", "Name":"Living in the Material World", "Core":"NSci", "Day":"MWF", "Time":"11"},'+
+'{"Course":"CHEM170102", "Name":"Living in the Material World", "Core":"NSci", "Day":"TTh", "Time":"15"},'+
+'{"Course":"CHEM170103", "Name":"Living in the Material World", "Core":"NSci", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"EESC117401", "Name":"Climate Change and Society", "Core":"NSci", "Day":"MWF", "Time":"10"},'+
+'{"Course":"EESC117701", "Name":"Cosmos", "Core":"NSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"EESC118201", "Name":"The Living Earth II", "Core":"NSci", "Day":"TTh", "Time":"9"},'+
+'{"Course":"EESC118701", "Name":"Geoscience and Public Policy", "Core":"NSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"EESC118702", "Name":"Geoscience and Public Policy", "Core":"NSci", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"EESC118703", "Name":"Geoscience and Public Policy", "Core":"NSci", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"PHYS220101", "Name":"Introductory Physics II (Calc)", "Core":"NSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"PHIL107001", "Name":"Philosophy of the Person I", "Core":"Phil", "Day":"MWF", "Time":"12"},'+
+'{"Course":"PHIL107101", "Name":"Philosophy of the Person II", "Core":"Phil", "Day":"MWF", "Time":"8"},'+
+'{"Course":"PHIL108901", "Name":"Person and Social Responsibility II", "Core":"Phil", "Day":"MWF", "Time":"15"},'+
+'{"Course":"PHIL109101", "Name":"Perspectives on Western Culture II", "Core":"Phil", "Day":"MWF", "Time":"8"},'+
+'{"Course":"PHIL109102", "Name":"Perspectives on Western Culture II", "Core":"Phil", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"PHIL109103", "Name":"Perspectives on Western Culture II", "Core":"Phil", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"PHIL228201", "Name":"Philosophy of Human Existence II", "Core":"Phil", "Day":"MWF", "Time":"10"},'+
+'{"Course":"AADS111001", "Name":"Introduction to African Diaspora Studies", "Core":"SSci", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ECON113101", "Name":"Principles of Economics I/Microeconomics", "Core":"SSci", "Day":"MWF", "Time":"10"},'+
+'{"Course":"ECON113102", "Name":"Principles of Economics I/Microeconomics", "Core":"SSci", "Day":"TTh", "Time":"12"},'+
+'{"Course":"ECON113103", "Name":"Principles of Economics I/Microeconomics", "Core":"SSci", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"ECON170101", "Name":"Human Disease: Health, the Economy, and Society", "Core":"SSci", "Day":"MWF", "Time":"12"},'+
+'{"Course":"ECON170102", "Name":"Human Disease: Health, the Economy, and Society", "Core":"SSci", "Day":"MWF", "Time":"12"},'+
+'{"Course":"ECON170103", "Name":"Human Disease: Health, the Economy, and Society", "Core":"SSci", "Day":"MWF", "Time":"13"},'+
+'{"Course":"POLI104301", "Name":"The History and Politics of Terrorism", "Core":"SSci", "Day":"TTh", "Time":"12"},'+
+'{"Course":"POLI104501", "Name":"Religion in a Secular World: Church/Mosque/State", "Core":"SSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"POLI104502", "Name":"Religion in a Secular World: Church/Mosque/State", "Core":"SSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"POLI104503", "Name":"Religion in a Secular World: Church/Mosque/State", "Core":"SSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"POLI104504", "Name":"Religion in a Secular World: Church/Mosque/State", "Core":"SSci", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"PSYC103201", "Name":"Emotion", "Core":"SSci", "Day":"MWF", "Time":"12"},'+
+'{"Course":"PSYC111001", "Name":"Introduction to Psychology as a Natural Science", "Core":"SSci", "Day":"TTh", "Time":"15"},'+
+'{"Course":"PSYC111101", "Name":"Introduction to Psychology as a Social Science", "Core":"SSci", "Day":"MWF", "Time":"15"},'+
+'{"Course":"SOCY100101", "Name":"Introductory Sociology", "Core":"SSci", "Day":"MWF", "Time":"10"},'+
+'{"Course":"SOCY100201", "Name":"Intro to Sociology for Healthcare Professions", "Core":"SSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"SOCY102401", "Name":"Gender and Society", "Core":"SSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"SOCY103001", "Name":"Deviance and Social Control", "Core":"SSci", "Day":"TTh", "Time":"15"},'+
+'{"Course":"SOCY104301", "Name":"Introduction to African American Society", "Core":"SSci", "Day":"MWF", "Time":"12"},'+
+'{"Course":"SOCY107101", "Name":"Global Inequalities", "Core":"SSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"SOCY107102", "Name":"Global Inequalities", "Core":"SSci", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"SOCY107103", "Name":"Global Inequalities", "Core":"SSci", "Day":"MWF", "Time":"13"},'+
+'{"Course":"SOCY109201", "Name":"Peace or War: United States/Third World", "Core":"SSci", "Day":"MWF", "Time":"10"},'+
+'{"Course":"SOCY109301", "Name":"Comparative Social Change", "Core":"SSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"SOCY109302", "Name":"Comparative Social Change", "Core":"SSci", "Day":"TTh", "Time":"12"},'+
+'{"Course":"SOCY109303", "Name":"Comparative Social Change", "Core":"SSci", "Day":"MWF", "Time":"14"},'+
+'{"Course":"SOCY109304", "Name":"Comparative Social Change", "Core":"SSci", "Day":"TTh", "Time":"15"},'+
+'{"Course":"THEO100201", "Name":"Biblical Heritage II", "Core":"Theo", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"THEO101701", "Name":"Introduction to Christian Theology II", "Core":"Theo", "Day":"MWF", "Time":"10"},'+
+'{"Course":"THEO102401", "Name":"Exploring Catholicism II: Tradition & Transformation", "Core":"Theo", "Day":"TTh", "Time":"12"},'+
+'{"Course":"THEO108901", "Name":"Person and Social Responsibility II", "Core":"Theo", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"THEO109101", "Name":"Perspectives on Western Culture II", "Core":"Theo", "Day":"TTh", "Time":"13.3"},'+
+'{"Course":"THEO116201", "Name":"Religious Quest: Comparative Perspect II", "Core":"Theo", "Day":"MWF", "Time":"13"},'+
+'{"Course":"THEO170001", "Name":"Theological Inquiry", "Core":"Theo", "Day":"TTh", "Time":"16.3"},'+
+'{"Course":"ENGL101001", "Name":"First Year Writing Seminar", "Core":"Writ", "Day":"TTh", "Time":"10.3"},'+
+'{"Course":"ENGL101002", "Name":"First Year Writing Seminar", "Core":"Writ", "Day":"MWF", "Time":"14"},'+
+'{"Course":"ENGL101003", "Name":"First Year Writing Seminar", "Core":"Writ", "Day":"MWF", "Time":"11"}]}'
+    
+    
+        
+    
+    
+    
+obj = JSON.parse(Text);
+        console.log(obj);
+document.getElementById("demo").innerHTML =
+obj.Classes[1].Day
+</script>
+
+<div> 
+    <form>    
+    <select id="Core">
+      <option>Art</option>
+      <option>Cultural Diversity</option>
+      <option>History I</option>
+      <option>History II</option>
+      <option>Natural Science</option>   
+      <option>Philosophy</option> 
+      <option>Theology</option>
+      <option>Writing</option>
+      <option>Social Science</option>
+    </select>
+    <br><br>
+    <input type="button" onclick="disable()" value="Disable list">
+    <input type="button" onclick="enable()" value="Enable list">
+    </form>
+    <div> <button onclick="document.write(Core)">Try it</button>
+    </div>
+    </div>
+
+<h2>Course Recommendations</h2>
+
+    
+</body>
+</html>
